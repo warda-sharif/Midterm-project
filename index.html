@@ -1,188 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Zay Shop eCommerce HTML CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Zay</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 50px 20px;
+      text-align: center;
+      background: #eee;
+    }
+    .hero h2 {
+      margin-bottom: 10px;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 16px;
+      color: #555;
+    }
+     .products, .about, .contact {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+     .products h3, .about h3, .contact h3 {
+      margin-bottom: 20px;
+      font-size: 20px; 
+    }
+    
+    .chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      background: #ddd;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .chip:hover {
+      background: #ccc;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    .card h4 {
+      margin: 10px 0;
+    }
+    .price {
+      font-weight: bold;
+      color: #444;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 4px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #555;
+    }
+    .about p, .contact p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .newsletter {
+      background: #eee;
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .newsletter input {
+      padding: 10px;
+      width: 250px;
+      max-width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .newsletter button {
+      padding: 10px 16px;
+      border: none;
+      margin-left: 10px;
+      background: #333;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav id="topbar">
-            <div id="container">
-                <div class="container-item">
-                    <i  class="fa-solid fa-envelope link"></i>
-                    <a class="link" href="mailto:info@zayshop.com">info@zayshop.com</a>
-                    <i class="fa-solid fa-phone link"></i>
-                    <a class="link" href="tel:+1234567890">010-020-0340</a>
-                </div>
-                <div id="container-icon">
-                    <a class="link" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="link" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="link" href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="link" href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-        </nav>
-    
-          <nav class="navbar">
-    <a href="index.html" class="logo">Zay</a>
-    
-    <button class="btn">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-    
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="icons">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <div class="badge">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>7</span>
+  <header>
+    <h1>Shop Zay</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Shop Zay</h2>
+    <p>Your everyday store with simple, quality products at fair prices. We focus on comfort, durability, and style you can trust.</p>
+  </section>
+
+  <section class="products">
+    <h3>Featured Products</h3>
+    <div class="grid">
+      <div class="card">
+        <img src="https://martinvalen.com/29694-mv_large_default/men-s-casual-sneakers-iconic-white-black.jpg" alt="Casual Sneakers">
+        <h4>Casual Sneakers</h4>
+        <p>Lightweight and comfortable sneakers for daily wear.</p>
+        <p class="price">PKR 2,999</p>
+        <a href="#" class="btn">Add to Cart</a>
       </div>
-      <div class="badge">
-        <i class="fa-solid fa-user"></i>
-        <span>+99</span>
+      <div class="card">
+        <img src="https://uniworthdress.com/uploads/product/TCN2551.jpg" alt="Plain T-Shirt">
+        <h4>Plain T-Shirt</h4>
+        <p>Soft cotton tee available in multiple colors.</p>
+        <p class="price">PKR 799</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEmDePv42WRN51W1EuGwwFF21YrD9k5uM7FA&s" alt="Leather Wallet">
+        <h4>Leather Wallet</h4>
+        <p>Slim and durable leather wallet with multiple slots.</p>
+        <p class="price">PKR 1,499</p>
+        <a href="#" class="btn">Add to Cart</a>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyR-hmzzo8-3JWiNB7pQ12xIwSZzSzSyAySw&s" alt="Smart Watch">
+        <h4>Smart Watch</h4>
+        <p>Track your fitness and stay connected on the go.</p>
+        <p class="price">PKR 4,999</p>
+        <a href="#" class="btn">Add to Cart</a>
       </div>
     </div>
-  </nav>
-    </header>
-<main>
-<div class="hero-section">
-     <div class="arrow left">
-        <i class="fas fa-chevron-left"></i> 
-    </div>
-        <div class="caption">
-            <h1 class="h1-text">
-                <span class="bold">Zay</span>
-                <span class="lighter"> eCommerce</span>  
-            </h1>
-            <h3 class="h2">Tiny and Perfect eCommerce, Template</h3>
-            <p class="caption-para">
-                Zay Shop is an eCommerce HTML5 CSS, template with latest version of Bootstrap 5 (beta 1).
-                
-                This template is 100% free provided by <a class="hero-link" href="https://templatemo.com" target="_blank">Templatemo </a>website. Image credits go topba <a class="hero-link" href="https://unsplash.com/" target="_blank">Unsplash</a> and <a class=hero-link href="https://icons8.com/" target="_blank">Icons</a>                  
-            </p>
-        </div>
-        <div class="slider1">
-        <img src="home-image_01.jpg" alt="shoesimage">
-    </div>
-     <div class="arrow-right">
-         <i class="fas fa-chevron-right"></i>
-    </div> 
-     <div class="dots">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    </div>
-    
-     <!-- <div class="caption">
-            <h1 class="h1-text">Proident occaecat</h1>
-            <h3 class="h2">Aliquip ex ea commodo consequat</h3>
-            <p class="caption-para">
-                 You are permitted to use this Zay CSS template for your commercial websites. 
-                 You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.                  
-            </p>
-        </div>
-        <div class="slider1">
-        <img src="image 1.jpg" alt="shoesimage">
-    </div>
+  </section>
 
-     <div class="caption">
-            <h1 class="h1-text">Reprehenderit in voluptate</h1>
-            <h3 class="h2">Ullamco laboris nisi ut</h3>
-            <p class="caption-para">
-             We bring you 100% free CSS templates for your websites. 
-             If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.                 
-            </p>
-        </div>
-        <div class="slider1">
-        <img src="banner_img_03.jpg" alt="shoesimage">
-    </div> -->
+  <section class="about" id="about">
+    <h3>About Us</h3>
+    <p>At Shop Zay, we believe shopping should be easy and enjoyable. Our mission is to bring you everyday essentials and trendy items at affordable prices. From footwear to gadgets, we hand-pick products that blend quality with value.</p>
+  </section>
 
-    <div class="container-section">
-        <div class="container-content">
-        <h1 class="container-heading">Categories of The Month</h1>
-        <p class="container-para">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-        </p>
-        </div>
-    </div>
-        <div class="container-second">
-        <div class="container-image">
-        <a href="#"><img src="home-image-2.jpg" alt="watch"></a>
-        <h5 class="image-head">watches</h5>
-        <p class="image-para">Go Shop</p>
-        </div>
-        <div class="container-image">
-        <a href="#"><img src="home-image-3-jpg" alt="watch"></a>
-        <h5 class="image-head">Shoes</h5>
-        <p class="image-para">Go Shop</p>
-        </div>
-        <div class="container-image">
-        <a href="#"><img src="home-image4.jpg" alt="watch"></a>
-        <h5 class="image-head">Accessories</h5>
-        <p class="image-para">Go Shop</p>
-        </div> 
-        </div>
-    </main>
+  <section class="contact" id="contact">
+    <h3>Contact Us</h3>
+    <p>If you have any questions, feel free to reach out. We are here to help!</p>
+    <p><strong>Email:</strong> support@shopzay.com</p>
+    <p><strong>Phone:</strong> +92 300 1234567</p>
+    <p><strong>Address:</strong> Main Street, Karachi, Pakistan</p>
+  </section>
 
-    <footer>
-  <div class="foot-one">
- 
-    <ul class="footer-column">
-      <li><h2 class="foot-head">Zay Shop</h2></li>
-      <li class="footer-icon">
-        <i class="fa fa-map-marker-alt fa-fw"></i>
-        <a class="footer-link" href="#">123 Consectetur at ligula 10660</a>
-      </li>
-      <li class="footer-icon">
-        <i class="fa-solid fa-envelope"></i>
-        <a class="footer-link" href="mailto:info@zayshop.com">info@zayshop.com</a>
-      </li>
-      <li class="footer-icon">
-        <i class="fa-solid fa-phone"></i>
-        <a class="footer-link" href="tel:+1234567890">010-020-0340</a>
-      </li>
-    </ul>
-     
+  <section class="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <p>Be the first to know about discounts and new arrivals.</p>
+    <form onsubmit="return false">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
 
-    
-    <ul class="footer-column">
-      <li><h2 class="foot-head">Products</h2></li>
-      <li><a class="footer-link" href="#">Luxury</a></li>
-      <li><a class="footer-link" href="#">Sport Wear</a></li>
-      <li><a class="footer-link" href="#">Men's Shoes</a></li>
-      <li><a class="footer-link" href="#">Women's Shoes</a></li>
-      <li><a class="footer-link" href="#">Popular Dress</a></li>
-      <li><a class="footer-link" href="#">Gym Accessories</a></li>
-      <li><a class="footer-link" href="#">Sport Shoes</a></li>
-    </ul>
-
-  
-    <ul class="footer-column">
-      <li><h2 class="foot-head">Further Info</h2></li>
-      <li><a class="footer-link" href="#">Home</a></li>
-      <li><a class="footer-link" href="#">About Us</a></li>
-      <li><a class="footer-link" href="#">Shop Locations</a></li>
-      <li><a class="footer-link" href="#">FAQs</a></li>
-      <li><a class="footer-link" href="#">Contact</a></li>
-    </ul>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2025 Your Company. All Rights Reserved.</p>
-  </div>
-</footer>
-
-
+  <footer>
+    <p>© <span id="year"></span> Shop Zay. All rights reserved.</p>
+  </footer>
 </body>
 </html>
